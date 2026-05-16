@@ -9,7 +9,6 @@ export default React.createClass({
         return (
             <li>
                 <p><a href={url} target='_blank'>{ this.props.notes.title }</a></p>
-                <p>Ticket #:{ this.props.notes.ticketnumber }</p>
                 <p>Opened On { this.props.notes.createdon }</p>
             </li>
         );
