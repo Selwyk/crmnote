@@ -13,14 +13,14 @@ export default React.createClass({
             '$filter=statecode eq 0' +
             '&$orderby=createdon desc' +
             '&$top=10' +
-            '&$select=annotationid,title,createdon,ticketnumber';
+            '&$select=annotationid,title,createdon';
 
         url = window.parent.Xrm.Page.context.prependOrgName(url);
         fetch(url, {
             credentials: 'same-origin'
         })
             .then(res => res.json())
-            .then(json => this.setState({ annotation: json.value }));
+            .then(json => this.setState({ notes: json.value }));
     },
 
     componentDidMount: function () {
@@ -34,7 +34,7 @@ export default React.createClass({
 
     render: function () {
         return (
-            <NoteList notes={this.state.notes} />
+            <CaseList notes={this.state.notes} />
         );
     }
 

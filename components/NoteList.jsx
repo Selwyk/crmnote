@@ -5,7 +5,7 @@ export default React.createClass({
     render: function () {
         return (
             <ul>
-                { this.props.notes.map(n => <Note key={n.annotationid} note={n} />) }
+                { this.props.notes.map(n => <Case key={n.annotationid} notes={n} />) }
             </ul>
         );
     }

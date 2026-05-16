@@ -5,7 +5,7 @@ import CaseSummary from './components/NoteSummary.jsx';
 
 window.addEventListener('load', function onLoad() {
     ReactDOM.render(
-        <NoteSummary />,
+        <CaseSummary />,
         document.getElementById("container")
     );
 });
